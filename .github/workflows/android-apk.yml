@@ -35,8 +35,12 @@ jobs:
           node-version: "22"
           cache: pnpm
 
+      - 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+
 
       - name: Install Android NDK
         run: |
